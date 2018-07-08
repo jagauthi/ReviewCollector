@@ -17,7 +17,15 @@ public class RestTemplate {
 
 	private static final Logger LOGGER = Logger.getLogger(ReviewCollectorService.class.getName());
 
-	// HTTP GET request
+	/**
+	 * Makes an HTTP Get call with the provided URL, and returns the object with the
+	 * given class
+	 * 
+	 * @param url
+	 * @param clazz
+	 * @return
+	 * @throws Exception
+	 */
 	public <T> T sendGet(String url, Class<T> clazz) throws Exception {
 
 		LOGGER.info("GET request received for url: " + url);
